@@ -1,0 +1,1 @@
+CREATE TABLE `atonstore`.`prendas` (`id_prendas` INT NOT NULL AUTO_INCREMENT , `nombre` VARCHAR(55) NOT NULL , `descripcion` TEXT NOT NULL , `existencias` INT NOT NULL , `estilo` VARCHAR(55) NOT NULL , PRIMARY KEY (`id_prendas`), UNIQUE (`nombre`)) ENGINE = InnoDB;
