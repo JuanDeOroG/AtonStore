@@ -1,45 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="resources/css/despliegue.css">
-
-
+    <title>A T O N</title>
+    <link rel="icon" type="image/x-icon" href="resources/img/logo.png">
+    <link rel="stylesheet" href="resources/css/Style.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
-    
-    <input type="submit" id="btnMostrar" value="Mostrar">
-    <div class="menuBuscar" id="menuBuscar">
-        <div class="barBuscar" >BUSCAR PRENDA</div>
-
-        <form action="/buscado" method="POST">
-            <input class="inputBuscar" name="inputBuscar" id="inputBuscar" type="text" placeholder="Buscador">
-            <input type="submit" value="Buscar">
-        </form>
-        
-        <div class="sugerencias">
-            <h3 style="text-align: center;">Suggestions</h3>
-
-            <ul class="listaSugerencias">
-                <li>Formal</li>
-                <li>Kids</li>
-                <li>Casual</li>
-                <li>Shoes</li>
-                <li>Sport</li>
-                <li>T-Shirt</li>
-                <li>Chines</li>
-                <li>Informal</li>
-                <li>Jogger</li>
-                <li>Jeans</li>
-                <li>Blazer</li>
-            </ul>
+    <section class="hero-main">
+        <header class="header">
+            <nav class="navbar">
+                <div class="name">
+                    <a href="/index.html">
+                        <h1>aton</h1>
+                    </a>
+                </div>
+                <div class="logo">
+                    <img src="resources/img/logo.png" alt="logo">
+                </div>
+                <div class="list"> 
+                    <ul class="ul-list">
+                        <li class="item-navbar"><a href="#">Tienda</a></li>
+                        <li class="item-navbar"><a href="#">Man</a></li>
+                        <li class="item-navbar"><a href="#">New</a></li>
+                        <li class="item-navbar"><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="hero-container">
+            <div class="block-text">
+                <div class="logo-hero">
+                    <img src="resources/img/logo.png" alt="logo">
+                </div>
+                <div class="tittle-hero">
+                    <h1>Prendas 100% algodón</h1>
+                    <p>Únete Ahora a nuestro estilo, <br> no hay más opción.</p>
+                </div>
+            </div>
+            <div class="man-hero">
+                <img src="resources/img/man-hero/man.jpg.png" alt="man">
+            </div>
         </div>
-    </div>
+    </section>
+    <!--Section de presentacion de las prendas-->
+    <section class="section-prendas">
+        <div class="contenedor-prendas">
+            <div class="tittle-img-prendas">
+                <h1>Nuestras prendas</h1>
+            </div>
+            <div class="img-list">
+                <div class="prendas-img">
+                    <a href="#">
+                        <img src="resources/img/img-prendas/buso-fuego.png" alt="prendas">
+                    </a>
+                </div>
+                <div class="prendas-img">
+                    <a href="#">
+                        <img src="resources/img/img-prendas/shirt-white.png" alt="prendas" class="man-1">
+                    </a>
+                </div>
+                <div class="prendas-img">
+                    <a href="#">
+                        <img src="resources/img/img-prendas/shirt-black.png" alt="prendas">
+                    </a>
+                </div>
+                <div class="prendas-img">
+                    <a href="#">
+                        <img src="resources/img/img-prendas/prenda-casual.png" alt="prendas">
+                    </a>
+                </div>
+                <div class="prendas-img">
+                    <a href="#">
+                        <img src="resources/img/img-prendas/chaqueta-jean.png" alt="prendas">
+                    </a>
+                </div>
+                <div class="prendas-img">
+                    <a href="#">
+                        <img src="resources/img/img-prendas/buso-color.png" alt="prendas" class="buso-color">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Las más vendidas-->
+    <section class="section-vendidas">
+        <div class="container-vendidas">
+            <div class="tittle-vendidas">
+                <h1>más vendidas</h1>
+            </div>
+            <div class="img-vendidas">
+                <div class="list-vendidas">
+                    <a href="#">
+                        <img src="resources/img/mas-vendidas/man-prenda-black.jpg" alt="vendidas">
+                    </a>
+                </div>
+                <div class="list-vendidas">
+                    <a href="#">
+                        <img src="resources/img/mas-vendidas/vendidas-1.jpg" alt="vendidas">
+                    </a>
+                </div>
+                <div class="list-vendidas">
+                    <a href="#">
+                        <img src="resources/img/mas-vendidas/girl-prenda-blanca.jpg" alt="vendidas">
+                    </a>
+                </div>
+                <div class="list-vendidas">
+                    <a href="#">
+                        <img src="resources/img/mas-vendidas/man-estamapdo-azul.jpg" alt="vendidas">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--variedades-->
+
+    <section class="section-variedades">
+        <div class="cotainer-variedades">
+            <div class="tittle-varieades">
+                <h1>Nueva colección</h1>
+                <p>Nuestros diseños innovadores están creado para cualquier estilo y personalidad.</p>
+            </div> 
+            <div class="contendor-variedades">
+            <div class="variedades">
+                <a href="#">
+                    <img src="resources/img/variedades/inferiores-man.png" alt="prendas">
+                </a>
+            </div>
+            <div class="variedades">
+                <a href="#">
+                    <img src="resources/img/variedades/gorra-aton.png" alt="prendas">
+                </a>
+            </div>
+        </div>
+            <div class="contenedor-man">
+                <div class="img-botton-variedades">
+                    <a href="#"> 
+                        <img src="resources/img/variedades/man-img.png" alt="prendas">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Politicas-->
+    <section class="section-politicas">
+        <div class="continer-politicas">
+            <di class="img-politicas">
+                <img src="resources/img/derechos de autor/img-autor.jpg" alt="reservado">
+            </di>
+            <di class="titulos-politicas">
+                <div class="tittle-politicas">
+                    <h1>Derechos de autor</h1>
+                </div>
+                <div class="parrafo-politicas">
+                    <p>Cada imagen de esta página son sacadas de internet, tanto como el logo y el nombre de la tienda no es real (no esta legalmente registrado), esta página de ropa es creada con el fin de dar a conocer
+                        a los usuarios nuestro trabajo como desarrolladores de páginas web.
+                    </p>
+                </div>
+            </di>
+        </div>
+    </section>
     
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="logo-footer">
+                <h1>aton</h1>
+            </div>
+            <div class="redes-sociales">
+                <div class="tittle-social">
+                    <h1>Redes sociales</h1>
+                </div>
+                <ul class="list-sociales">
+                    <li class="iconos-sociales"><i class="bi bi-twitter"></i></li>
+                    <li class="iconos-sociales"><i class="bi bi-tiktok"></i></li>
+                    <li class="iconos-sociales"><i class="bi bi-instagram"></i></li>
+                    <li class="iconos-sociales"><i class="bi bi-facebook"></i></li>
+                </ul>
+            </div>
+            <div class="cotact">
+                <div class="contact-service">
+                    <h1>Contactanos</h1>
+                </div>
+                <div class="number-contact">
+                    <i class="bi bi-telephone">+57 301 2771321</i>
+                </div>
+            </div>
+        </div> 
+    </footer>
+
 </body>
 </html>
-<script src="resources/javascript/funcion.js" ></script>
