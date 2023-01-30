@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-tittle: 'Anton', sans-serif;
+    --font-text: 'Poppins', sans-serif;
+    --font-tittle-hero: 'Bebas Neue', cursive;
+    --img-logo: url(/public/img/logo.png);
+    --clr-hero: #F1F1F1;
+    --clr-variedad: #edeee9;
+    --background-fondo: url(/public/img/fondo.jpg);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.navbar-section{
+    background-color: #282828;
+    padding: 20px 40px;
+    margin-bottom: 100px;
+}
+
+.container-nav{
+    max-width: 1200px;
+    margin: auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.name h1{
+    font-size: 2rem;
+    font-family: var(--font-tittle);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: white;
+}
+.logo img{
+    width: 60px;
+}
+
+.ul-list{
+    display: flex;
+    gap: 1rem;
+}
+ul .item-navbar{
+    text-transform: uppercase;
+    font-family: var(--font-text);
+    letter-spacing: .2rem;
+}
+
+.item-navbar a{
+    color: white;
+    transition: .3s;
+}
+.item-navbar a:hover{
+    color: rgb(188, 190, 192);
+}
+
+
+/***Presentacion de prenda***/
+.container-main{
+    max-width: 1200px;
+    margin: auto;
+}
+.ropa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.img-ropa{
+    background-color: #f4f4f4;
+}
+.info-prenda{
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.name-prenda{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+}
+.name-prenda h1{
+    font-size: 4rem;
+    font-family: var(--font-tittle-hero);
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin-bottom: 20px;
+}
+
+.text-description p{
+    font-size: 2rem;
+    font-family: var(--font-text);
+}
+/***Lista de tallas***/
+.tallas{
+    margin-top: 20px;
+}
+.contendor-list{
+    display: flex;
+    gap: 2rem;
+}
+.tittle-talla{
+    margin-bottom: 20px;
+}
+.tittle-talla label{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: var(--font-text);
+    letter-spacing: .2rem;
+}
+
+.contendor-list span{
+    font-family: var(--font-text);
+    letter-spacing: .2rem;
+    border: solid 1px #282828;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    text-align: center;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.contendor-list span:hover{
+    background-color: #282828;
+    color: white;
+    border: none;
+}
+
+/***Cantidad de prendas a comprar***/
+
+
+.cantidad-prenda{
+    margin-top: 20px;
+}
+
+.text-cantidad label{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: var(--font-text);
+    letter-spacing: .2rem;
+}
+.input-cantidad{
+    display: flex;
+    flex-direction: column;
+}
+.input-cantidad .cantidad{
+    border: solid 1px #282828;
+    border-radius: 5px;
+    width: 25%;
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+.input-cantidad .btn{
+    background: none;
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-align: center;
+    border: solid 1px #282828;
+    transition: all .3s ease;
+    border-radius: 10px;
+    width: 60%;
+    cursor: pointer;
+}
+.input-cantidad .btn:hover{
+    background-color: #282828;
+    color: white;
+}

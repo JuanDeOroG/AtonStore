@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --font-tittle: 'Anton', sans-serif;
+    --font-text: 'Poppins', sans-serif;
+    --font-tittle-hero: 'Bebas Neue', cursive;
+    --img-logo: url(/img/logo.png);
+    --clr-hero: #F1F1F1;
+    --clr-variedad: #edeee9;
+    --background-fondo: url(/Paginas/img/fondo/fondo.jpg);
+}
+
+.container-busqueda{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.form-buscar input{
+    width: 100%;
+    padding: 20px 40px;
+    font-family: Helvetica;
+}
+
+
+.container-target{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+}
+
+.img-target{
+    background-color: #f4f4f4;
+    width: 150px;
+    height: 150px;
+}
+
+.img-target img{
+    height: 100%;
+    width: 100%;
+}
+.description-prenda h1{
+    font-family: var(--font-tittle-hero);
+}
+.description-prenda p{
+    font-family: var(--font-text);
+}

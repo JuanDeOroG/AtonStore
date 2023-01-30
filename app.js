@@ -35,12 +35,12 @@ const path = require("path");
 
 // VISTAS GET
     app.get("/",function (req,res) {
-        res.render("indexprueba", { msg:"Juan De Ore" })
+        res.render("indexprueba")
         
     })
 
     app.get("/buscado",function (req,res) {
-        res.render("buscado")
+        res.render("buscado",{datos:""})
         
     })
 
@@ -57,28 +57,17 @@ app.post("/buscado", async (req, res) => {
         if (rows.length != 0){
             //pasamos los resultados a la variable datos
             const datos = rows
-            console.log(datos);
-            console.clear()
-            let resultadosList= []
+            // console.log(datos);
+            // console.clear()
+            // let resultadosList= []
             for(let x of datos){
-                resultadosList.push(x)
+                
                 console.log("X es igual a: ",x.imagen)
 
-
+                //convertimos el blob de la imagen en png y lo guardamos en una carpeta
                 fs.writeFileSync(path.join(__dirname,"./public/img/dbimages/"+x.id_prendas+x.nombre+".png"),x.imagen)
 
             }
-            const dbimages =fs.readdirSync(path.join(__dirname,"./public/img/dbimages/"))
-
-            console.log(dbimages)
-
-
-            
-
-            
-            
-
-            // luego cada dato lo pasamos a una variable:
            
 
             res.render("buscado",{datos:datos})
