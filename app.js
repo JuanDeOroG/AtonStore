@@ -1,5 +1,6 @@
 const express =require("express")
 const app= express()
+var fs = require('fs');
 
 // seteamos para capturar los datos del formulario
 app.use(express.urlencoded({extended:false}))
@@ -28,12 +29,13 @@ app.use(session({
 
 // MODULO DE CONECCION BD
 
-const connection = require("./database/db")
+const connection = require("./database/db");
+const path = require("path");
 
 
 // VISTAS GET
     app.get("/",function (req,res) {
-        res.render("index", { msg:"Juan De Ore" })
+        res.render("indexprueba", { msg:"Juan De Ore" })
         
     })
 
@@ -56,11 +58,24 @@ app.post("/buscado", async (req, res) => {
             //pasamos los resultados a la variable datos
             const datos = rows
             console.log(datos);
+            console.clear()
+            let resultadosList= []
+            for(let x of datos){
+                resultadosList.push(x)
+                console.log("X es igual a: ",x.imagen)
 
-            // for(let x of datos){
-            //     console.log("dato:",x)
-            // }
 
+                fs.writeFileSync(path.join(__dirname,"./public/img/dbimages/"+x.id_prendas+x.nombre+".png"),x.imagen)
+
+            }
+            const dbimages =fs.readdirSync(path.join(__dirname,"./public/img/dbimages/"))
+
+            console.log(dbimages)
+
+
+            
+
+            
             
 
             // luego cada dato lo pasamos a una variable:

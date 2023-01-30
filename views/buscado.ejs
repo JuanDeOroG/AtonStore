@@ -11,6 +11,9 @@
         <%   for(let x of datos){%>
         <h2><%= x.nombre  %> </h2>
         <p><%=x.descripcion  %></p>
+        
+        <img src="resources/img/dbimages/<%=x.id_prendas+x.nombre %>.png" alt="<%= x.nombre %>">
+
         <% } %> 
 </body>
 </html>
