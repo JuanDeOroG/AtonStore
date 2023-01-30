@@ -35,7 +35,7 @@ const path = require("path");
 
 // VISTAS GET
     app.get("/",function (req,res) {
-        res.render("indexprueba")
+        res.render("index")
         
     })
 
