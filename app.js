@@ -40,12 +40,65 @@ const path = require("path");
     })
 
     app.get("/buscado",function (req,res) {
-        res.render("buscado",{datos:""})
+        if (req.session.carrito) {
+            carrito = req.session.carrito
+            
+        } else { carrito = false }
+        res.render("buscado",{datos:"",carrito:carrito})
         
     })
 
 
 //Vistas POST --------------------------------------------
+
+app.post("/addcart", async function (req,res) {
+    if (!req.session.carrito) {
+        req.session.carrito = []
+        let prenda= req.body.prenda
+        req.session.carrito.push(prenda)
+        console.log("Lista carrito: ", req.session.carrito)
+        res.redirect("/buscado")
+
+    } else { console.log("Ya fue creada la lista: ", req.session.carrito)
+        let prenda = req.body.prenda
+        req.session.carrito.push(prenda)
+        console.log("Lista carrito: ", req.session.carrito)
+        res.render("buscado",{carrito:req.session.carrito,datos:""})
+
+}
+    
+})
+
+app.post("/quitar", async function (req, res) {
+    
+        console.log("apunto de quitar una prenda ", req.session.carrito)
+        let qprenda = req.body.qprenda
+        console.log("La prenda por quitar es ",qprenda)
+        let listaquitar = []
+
+        for(x of req.session.carrito){
+
+            if (x==qprenda) {
+                console.log("se encontró",x," Y se quitará de la lista")
+                
+            }else{
+                listaquitar.push(x)
+            }
+        }
+
+        req.session.carrito = listaquitar
+
+
+        // req.session.carrito = req.session.carrito.filter((qprenda) => qprenda == qprenda)
+
+        
+        console.log("Lista carrito: ", req.session.carrito)
+        res.render("buscado", { carrito: req.session.carrito, datos: "" })
+
+    
+
+})
+
 
 
 app.post("/buscado", async (req, res) => {
@@ -62,7 +115,6 @@ app.post("/buscado", async (req, res) => {
             // let resultadosList= []
             for(let x of datos){
                 
-                console.log("X es igual a: ",x.imagen)
 
                 //convertimos el blob de la imagen en png y lo guardamos en una carpeta
                 fs.writeFileSync(path.join(__dirname,"./public/img/dbimages/"+x.id_prendas+x.nombre+".png"),x.imagen)
@@ -70,7 +122,7 @@ app.post("/buscado", async (req, res) => {
             }
            
 
-            res.render("buscado",{datos:datos})
+            res.render("buscado", { datos: datos, carrito: false })
         } else {
             console.log("revisa avr")
             

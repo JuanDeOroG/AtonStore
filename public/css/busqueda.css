@@ -14,19 +14,62 @@
     --clr-variedad: #edeee9;
     --background-fondo: url(/Paginas/img/fondo/fondo.jpg);
 }
-
-.container-busqueda{
+.input-buscar{
+    margin-bottom: 100px;
+}
+.container-buscar{
     max-width: 1200px;
     margin: auto;
 }
-
-.form-buscar input{
+.buscador-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buscador-contenedor .buscadorr{
     width: 100%;
+    padding: 15px 30px;
+    color: #282828;
+    border: solid 1px #282828;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    outline: none;
     padding: 20px 40px;
-    font-family: Helvetica;
+    transition: all .3s ease;
+    background: none;
 }
 
 
+.btn-buscar{
+    border: solid 1px #282828;
+    display: none;
+}
+
+
+.buscador-contenedor .buscadorr:hover{
+    width: 1100px;
+}
+.buscador-contenedor .buscadorr:focus{
+    width: 1000px;
+}
+.container-1{
+    background-color: white;
+    border: solid 1px #282828;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 40px;
+}
+
+.container-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .container-target{
     max-width: 1200px;
     margin: auto;

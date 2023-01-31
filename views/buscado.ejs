@@ -46,18 +46,21 @@
     </section>
 
     <main class="input-buscar">
-        <div class="container-busqueda">
-            <div class="resultados">
-                <form action="/buscado" method="POST" class="form-buscar" >
-                    <input type="text" name="inputBuscar" id="inputBuscar" placeholder="Buscador">
-                    <input type="submit" value="Buscar prenda">
-                    <label for="">
+        <div class="container-buscar">
+            <form action="/buscado" method="POST" class="buscador-contenedor">
+                <input type="text" name="inputBuscar" id="inputBuscar" placeholder="Buscar" class="buscadorr">
+                <div class="btn-buscar">
+                    <input type="submit" value="btn">
+                </div>
+                <div class="container-1">
+                    <div class="container-2">
                         <i class="bi bi-search"></i>
-                    </label>
-                </form>
-            </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </main>
+    
 
     <main class="target-main">
         <% for(let x of datos){%>
@@ -69,13 +72,38 @@
                 </div>
             </div>
             <div class="description-prenda">
-                <h1><%= x.nombre %></h1>
-                <p><%=x.descripcion %></p>
+                
+                <form action="/addcart" method="POST">
+                    <h1>
+                        <%= x.nombre %>
+                    </h1>
+                    <input type="text" id="prenda"  name="prenda" value="<%= x.nombre %>" style="display: none;">
+                    <p>
+                        <%=x.descripcion %>
+                    </p>
+                <button type="submit" >Añadir al carrito</button>
+                </form>
             </div>
         </div>
             <% } %>
         
+
+            <% if(carrito){%>
+                <% for(x of carrito) {%> 
+                    <form action="/quitar" method="POST">
+                    <h1><%=x %> </h1>
+
+                    <input type="text" id="qprenda" name="qprenda" value="<%=x %>" style="display: none;">
+
+                    <button type="submit" >Quitar</button>
+                    
+                    </form>
+
+                    <% } %> 
+
+                <% }else{ %> <h2>No hay carrito</h2> <% } %> 
     </main>
 </body>
 
 </html>
+<script></script>
