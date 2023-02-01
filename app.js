@@ -48,7 +48,29 @@ const path = require("path");
         
     })
 
+    //GET DE NUESTRAS PRENDAS :^|
 
+        app.get("/buso-fuego", (req,res)=>{
+            res.render("nuestras_prendas/buso-fuego")
+        })
+
+        app.get("/shirt-white", (req, res) => {
+            res.render("nuestras_prendas/shirt-white")})
+
+        app.get("/shirt-black", (req, res) => {
+            res.render("nuestras_prendas/shirt-black")
+        })
+
+        app.get("/prenda-casual", (req, res) => {
+            res.render("nuestras_prendas/prenda-casual")
+        })
+        app.get("/chaqueta-jean", (req, res) => {
+            res.render("nuestras_prendas/chaqueta-jean")
+        })
+        app.get("/buso-color", (req, res) => {
+            res.render("nuestras_prendas/buso-color")
+        })
+        
 //Vistas POST --------------------------------------------
 
 app.post("/addcart", async function (req,res) {
@@ -128,65 +150,6 @@ app.post("/buscado", async (req, res) => {
             
         }})
 })
-
-
-//     app.get("/login", function (req, res) {
-//         res.render("login", { msg: "Juan De Ore" })
-
-//     })
-//     app.get("/register", function (req, res) {
-//         res.render("register", { msg: "Juan De Ore" })
-
-//     })
-
-// // Post para insertar nuevo usuario - HACER REGISTRO
-
-// app.post("/register",async function (req,res) {
-//     const nombres = req.body.nombres.toUpperCase()
-//     const apellidos = req.body.apellidos.toUpperCase()
-//     const password = req.body.password.toUpperCase()
-//     const email = req.body.email.toUpperCase()
-//     const telefono = req.body.telefono
-//     const asunto = req.body.asunto.toUpperCase()
-//     const necesidad = req.body.necesidad.toUpperCase()
-//     let paswordHash= await bcryptjs.hash(password,8)
-
-//     connection.query("INSERT INTO usuarios_registrados SET ?", { nombres: nombres,apellidos:apellidos,password:paswordHash, email:email, telefono:telefono,asunto:asunto,necesidad:necesidad},async function (error,results) {
-//         if(error){
-//             console.log("Error al registrar: ", error)
-//             res.send("Hubo un error tecnico al momento de intentar realizar el registro bro, revisa avr...")
-//         }else{
-//             res.render("registrado")
-// }   
-        
-//     })
-    
-// })
-
-// // Post para iniciar sesion - AUTENTICACIÓN
-
-// app.post("/auth",async (req,res)=>{
-//     const nombres = req.body.nombres.toUpperCase() 
-//     const apellidos = req.body.apellidos.toUpperCase()
-//     const password = req.body.password.toUpperCase()
-//     let paswordHash = await bcryptjs.hash(password,8)
-
-//     if (nombres && apellidos && password){
-//         connection.query('SELECT * FROM `usuarios_registrados` WHERE nombres ="' + nombres + '" AND apellidos ="' + apellidos +'"',async function (error, rows,fields) {
-//             if (rows.length == 0 || !(await bcryptjs.compare(password,rows[0].password))){
-//                 res.send("Usuario o contraseña incorrectas...")
-//             }else{
-//                 console.log("Se supone que pasó a index, logueo correcto xd")
-//                 res.render("index")
-//             }
-//             // console.log("Rows: ",rows)
-//             // console.log("Error: ", error)
-//             // console.log("Fields: ", fields)
-            
-//         })
-//     }
-
-// })
 
 
 
