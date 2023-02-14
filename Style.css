@@ -1,0 +1,320 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-tittle: 'Anton', sans-serif;
+    --font-text: 'Poppins', sans-serif;
+    --font-tittle-hero: 'Bebas Neue', cursive;
+    --img-logo: url(/public/img/logo.png);
+    --clr-hero: #F1F1F1;
+    --clr-variedad: #edeee9;
+
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+
+.hero-main{
+    background-color: var(--clr-hero);
+}
+
+.header{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 40px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.name h1{
+    font-size: 2rem;
+    font-family: var(--font-tittle);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: black;
+}
+
+.logo img{
+    width: 60px;
+}
+.ul-list{
+    display: flex;
+    gap: 1rem;
+}
+
+ul .item-navbar{
+    text-transform: uppercase;
+    font-family: var(--font-text);
+    letter-spacing: .2rem;
+}
+
+.item-navbar a{
+    color: black;
+    transition: .3s;
+}
+
+.item-navbar a:hover{
+    color: rgb(188, 190, 192);
+}
+.hero-container{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.block-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-hero{
+    display: flex;
+}
+.logo-hero img{
+    width: 50px;
+}
+
+.tittle-hero{
+    padding: 10px 20px;
+}
+.tittle-hero h1{
+    font-family: var(--font-tittle-hero);
+    font-size: 5rem;
+}
+.tittle-hero p{
+    font-size: 1.5rem;
+    font-family: var(--font-text);
+}
+
+.man-hero img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*** lista de prendas ***/
+
+.contenedor-prendas{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tittle-img-prendas{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.tittle-img-prendas h1{
+    font-size: 4rem;
+    font-family: var(--font-tittle-hero);
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+}
+.img-list{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.prendas-img{
+    height: 350px;
+    width: 400px;
+    background-color: #f4f4f4;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prendas-img img{
+    width: 300px;
+}
+
+.prendas-img .buso-color{
+    width: 250px;
+}
+
+
+/***Más vendidas***/
+
+.section-vendidas{
+    margin-top: 200px;
+}
+
+.container-vendidas{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.tittle-vendidas{
+    margin-bottom: 40px;
+}
+
+.tittle-vendidas h1{
+    font-family: var(--font-tittle-hero);
+    letter-spacing: .5rem;
+    font-size: 4rem;
+    text-align: center;
+}
+.img-vendidas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.list-vendidas{
+    width: 529px;
+}
+
+.list-vendidas img{
+    width: 100%;
+    height: 100%;
+}
+
+/***variedades***/
+.section-variedades{
+    margin-top: 150px;
+}
+
+.cotainer-variedades{
+    max-width: 1200px;
+    margin: auto;
+}
+.tittle-varieades{
+    margin-bottom: 30px;
+    margin-bottom: 40px;
+
+}
+.tittle-varieades h1{
+    font-size: 4rem;
+    font-family: var(--font-tittle-hero);
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+}
+.tittle-varieades p{
+   font-size: 1.5rem;
+   font-family: var(--font-text);
+}
+
+
+.contendor-variedades{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.variedades{
+    background-color: var(--clr-variedad);
+}
+.variedades{
+    width: 503px;
+    height: 573px;
+}
+.variedades img{
+    width: 480px;
+    height: 570px;
+}
+.contenedor-man{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-botton-variedades{
+    background-color: var(--clr-variedad);
+    margin-top: 1rem;
+}
+
+
+/***Derechos de autor***/
+.continer-politicas{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.tittle-politicas{
+    padding: 40px;
+}
+.tittle-politicas h1{
+    font-family: var(--font-tittle-hero);
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin-bottom: 30px;
+}
+.parrafo-politicas{
+    padding: 40px;
+}
+.parrafo-politicas p{
+    font-size: 1.6rem;
+    font-family: var(--font-text);
+}
+
+/***Footer***/
+.footer{
+    background-color: #262626;
+    color: white;
+    padding: 20px 40px;
+}
+.container-footer{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-footer h1{
+    font-size: 3rem;
+    font-family: var(--font-tittle);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    cursor: pointer;
+}
+
+.list-sociales{
+    display: flex;
+    gap: 1rem;
+}
+
+.tittle-social{
+    margin-bottom: 20px;
+}
+.tittle-social h1{
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    font-weight: 200px;
+}
+
+
+.list-sociales .iconos-sociales{
+    font-size: 1.5rem;
+}
+
+.contact-service{
+    margin-bottom: 20px;
+}
+.contact-service h1{
+    font-size: 2rem;
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    font-weight: 200px;
+}
+.number-contact i{
+    font-size: 1.5rem;
+    font-family: var(--font-text);
+}

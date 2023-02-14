@@ -8,7 +8,7 @@
     --font-tittle: 'Anton', sans-serif;
     --font-text: 'Poppins', sans-serif;
     --font-tittle-hero: 'Bebas Neue', cursive;
-    --img-logo: url(/public/img/logo.png);
+    --img-logo: url(../img/logo.png);
     --clr-hero: #F1F1F1;
     --clr-variedad: #edeee9;
 
@@ -82,7 +82,6 @@ ul .item-navbar{
 .logo-hero img{
     width: 50px;
 }
-
 .tittle-hero{
     padding: 10px 20px;
 }
@@ -99,8 +98,89 @@ ul .item-navbar{
     width: 100%;
     height: 100%;
 }
+.list img{
+    display: none;
+}
+#btn-menu{
+    display: none;
+}
 
 
+@media screen and (max-width: 1200px){
+    .header{
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 994px){
+    .logo-hero img{
+        width: 40px;
+    }
+    
+    .tittle-hero h1{
+        font-size: 3.5rem;
+    }
+    .tittle-hero p{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .list{
+        position: fixed;
+        top: 0;
+        right: -250px;
+        background-color: #fff;
+        width: 250px;
+        height: 100vh;
+        padding: 40px;
+        z-index: 1;
+        transition: all .3s ease;
+    }
+    .ul-list{
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .ul-list .item-navbar{
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    .navbar .list img{
+        display: block;
+        width: 60px;
+    }
+    #black-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+    #btn-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: block;
+        height: 50px;
+        width: 50px;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+    #btn-menu:hover{
+      color: rgb(212, 212, 212);
+    }
+}
+@media screen and (max-width: 450px){
+    .man-hero img{
+        display: none;
+    }
+    .tittle-hero{
+        align-items: center;
+    }
+}
 /*** lista de prendas ***/
 
 .contenedor-prendas{
@@ -125,7 +205,6 @@ ul .item-navbar{
     text-transform: uppercase;
 }
 .img-list{
-    width: 50%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -134,111 +213,119 @@ ul .item-navbar{
 
 .prendas-img{
     height: 350px;
-    width: 400px;
+    width: 500px;
     background-color: #f4f4f4;
     margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .prendas-img img{
     width: 300px;
+    transition: all .3s ease;
+    display: block;
 }
 
 .prendas-img .buso-color{
     width: 250px;
 }
-
-
-/***Más vendidas***/
-
-.section-vendidas{
-    margin-top: 200px;
-}
-
-.container-vendidas{
-    max-width: 1200px;
-    margin: auto;
-}
-
-.tittle-vendidas{
-    margin-bottom: 40px;
-}
-
-.tittle-vendidas h1{
-    font-family: var(--font-tittle-hero);
-    letter-spacing: .5rem;
-    font-size: 4rem;
+.overlay{
+    transition: all .3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
-.img-vendidas{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-.list-vendidas{
-    width: 529px;
-}
-
-.list-vendidas img{
-    width: 100%;
-    height: 100%;
-}
-
-/***variedades***/
-.section-variedades{
-    margin-top: 150px;
-}
-
-.cotainer-variedades{
-    max-width: 1200px;
-    margin: auto;
-}
-.tittle-varieades{
-    margin-bottom: 30px;
-    margin-bottom: 40px;
-
-}
-.tittle-varieades h1{
-    font-size: 4rem;
-    font-family: var(--font-tittle-hero);
+.overlay a{
+    color: #262626;
     text-transform: uppercase;
-    letter-spacing: .4rem;
 }
-.tittle-varieades p{
-   font-size: 1.5rem;
-   font-family: var(--font-text);
-}
-
-
-.contendor-variedades{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-.variedades{
-    background-color: var(--clr-variedad);
-}
-.variedades{
-    width: 503px;
-    height: 573px;
-}
-.variedades img{
-    width: 480px;
-    height: 570px;
-}
-.contenedor-man{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.img-botton-variedades{
-    background-color: var(--clr-variedad);
-    margin-top: 1rem;
+.overlay a p{
+    border: solid 1px #262626;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    transition: all .3s ease;
 }
 
+.overlay a p:hover{
+    background-color: #262626;
+    color: white;
+}
+.overlay .iconos-tienda{
+    font-size: 2rem;
+}
+.overlay p{
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    font-family: var(--font-text);
+}
+.prendas-img:hover img{
+    opacity: 0.2;
+}
+.prendas-img:hover .overlay{
+    opacity: 1;
 
+}
+
+@media screen and (max-width: 1500px){
+    .section-prendas{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .contenedor-prendas{
+        max-width: 1200px;
+        margin: auto;
+
+    }
+    .img-list{
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .prendas-img{
+        height: 400px;
+        width: 350px;
+    }
+    .prendas-img img{
+        width: 100%;
+    }
+
+    .overlay .iconos-tienda{
+        font-size: 1.5rem;
+    }
+    .overlay p{
+        font-size: .8rem;
+        padding: 0;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 994px){
+    .tittle-img-prendas h1{
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 790px){
+    .tittle-img-prendas h1{
+        font-size: 2.6rem;
+    }
+    .img-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 720px){
+    .img-list{
+        display: flex;
+        flex-direction: column;
+    }
+}
 /***Derechos de autor***/
 .continer-politicas{
     max-width: 1200px;
@@ -247,6 +334,7 @@ ul .item-navbar{
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+    margin-bottom: 40px;
 }
 .tittle-politicas{
     padding: 40px;
@@ -256,7 +344,7 @@ ul .item-navbar{
     font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .parrafo-politicas{
     padding: 40px;
@@ -264,6 +352,69 @@ ul .item-navbar{
 .parrafo-politicas p{
     font-size: 1.6rem;
     font-family: var(--font-text);
+}
+
+@media screen and (max-width: 1500px){
+    .img-politicas img{
+        width: 400px;
+        height: 600px;
+    }
+}
+@media screen and (max-width: 1020px){
+    .tittle-politicas{
+        margin: 0;
+        padding: 0;
+    }
+    .parrafo-politicas{
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .tittle-politicas h1{
+        text-align: center;
+        font-size: 3rem;
+        padding: 0;
+        margin: 0;
+    }
+    .parrafo-politicas p{
+        padding: 0;
+        margin: 0;
+        font-size: 1.3rem;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    .img-politicas img{
+        width: 300px;
+        height: 500px;
+    }
+    .tittle-politicas h1{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 665px){
+    .img-politicas{
+        display: none;
+    }
+    .continer-politicas{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .titulos-politicas{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .parrafo-politicas p{
+      text-align: center;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .prendas-img{
+        width: 250px;
+    }
 }
 
 /***Footer***/
@@ -317,4 +468,44 @@ ul .item-navbar{
 .number-contact i{
     font-size: 1.5rem;
     font-family: var(--font-text);
+}
+
+@media screen and (max-width: 960px){
+    .container-footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .logo img{
+        width: 40px;
+    }
+    .container-footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-footer{
+        margin-bottom: 30px;
+    }
+    .redes-sociales{
+        margin-bottom: 30px;
+    }
+    .contact{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 300px){
+    .logo-footer h1{
+        font-size: 2rem;
+    }
+    .tittle-social h1{
+        font-size: 1.4rem;
+    }
+    .contact-service h1{
+        font-size: 1.4rem;
+    }
+    .number-contact i{
+        font-size: 1rem;
+    }
 }
