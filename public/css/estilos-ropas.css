@@ -8,10 +8,10 @@
     --font-tittle: 'Anton', sans-serif;
     --font-text: 'Poppins', sans-serif;
     --font-tittle-hero: 'Bebas Neue', cursive;
-    --img-logo: url(/public/img/logo.png);
+    --img-logo: url(../img/logo.png);
     --clr-hero: #F1F1F1;
     --clr-variedad: #edeee9;
-    --background-fondo: url(/public/img/fondo.jpg);
+    --background-fondo: url(../img/fondo/fondo.jpg);
 }
 a{
     text-decoration: none;
@@ -172,4 +172,304 @@ ul .item-navbar{
 .input-cantidad .btn:hover{
     background-color: #282828;
     color: white;
+}
+
+/***Mas variedades***/
+.section-mas-variedades{
+    margin-top: 100px;
+}
+
+
+.title-mas-variedades h1{
+    text-align: center;
+    font-family: var(--font-tittle-hero);
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 40px;
+}
+
+.container-mas-variedades{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.container-img-variedades{
+    display: flex;
+    gap: 1rem;
+}
+
+.fondo-img-variedades{
+    padding: 10px 20px;
+    background-color: var(--clr-hero);
+    width: 150px;
+    height: 150px;
+}
+
+.fondo-img-variedades img{
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease;
+}
+.fondo-img-variedades img:hover{
+    transform: scale(1.1);
+}
+
+
+.tittle-info-variedades h1{
+    font-size: 1.9rem;
+    font-family: var(--font-tittle-hero);
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.tittle-info-variedades p{
+    font-family: var(--font-text);
+}
+
+/***Footer***/
+.footer{
+    margin-top: 40px;
+    background-color: #262626;
+    color: white;
+    padding: 20px 40px;
+}
+.container-footer{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-footer h1{
+    font-size: 3rem;
+    font-family: var(--font-tittle);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    cursor: pointer;
+}
+
+.list-sociales{
+    display: flex;
+    gap: 1rem;
+}
+
+.tittle-social{
+    margin-bottom: 20px;
+}
+.tittle-social h1{
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    font-weight: 200px;
+}
+
+
+.list-sociales .iconos-sociales{
+    font-size: 1.5rem;
+}
+
+.contact-service{
+    margin-bottom: 20px;
+}
+.contact-service h1{
+    font-size: 2rem;
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    font-weight: 200px;
+}
+.number-contact i{
+    font-size: 1.5rem;
+    font-family: var(--font-text);
+}
+
+
+/***Responsive***/
+
+@media screen and (max-width: 1074px){
+    
+    .name-prenda h1{
+        font-size: 3rem;
+    }
+    .text-description p{
+        font-size: 1.5rem;
+    }
+
+    .tittle-talla{
+        font-size: 1.2rem;
+    }
+    .contendor-list span{
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+    .text-cantidad label{
+        font-size: 1.2rem;
+    }
+
+    .input-cantidad .cantidad{
+        padding: 5px 10px;
+    }
+    .input-cantidad .btn{
+        padding: 5px 0px;
+        font-size: 1.1rem;
+
+    }
+
+    .container-mas-variedades{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tittle-info-variedades h1{
+        text-align: center;
+        font-size: 2.4rem;
+    }
+    .tittle-info-variedades p{
+        padding: 10px 20px;
+        text-align: center;
+
+    }
+}
+@media screen and (max-width: 1000px){
+    .img-ropa img{
+        width: 454px;
+        height: 651px;
+    }
+}
+
+@media screen and (max-width: 888px){
+   .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+   }
+   .header .logo img{
+    width: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+   }
+   
+    .ropa{
+    display: flex;
+    flex-direction: column;
+   }
+   .info-prenda{
+    display: flex;
+    flex-direction: column;
+   }
+    .tallas{
+        display: flex;
+        gap: 1rem;
+    }   
+    .contendor-list{
+        margin-top: 10px;
+    }
+    .contendor-list span{
+        font-size: 1.5rem;
+        padding: 5px 20px;
+    }
+
+    .container-footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 720px){
+    .container-img-variedades{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .fondo-img-variedades{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 630px){
+  .fondo-img-variedades{
+    height: 150px;
+    width: 150px;
+  }
+
+  .tittle-info-variedades h1{
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 530px){
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .text-description{
+        padding: 20px 40px;
+        text-align: center;
+    }
+    .tallas{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 473px){
+    .img-ropa img{
+        width: 354px;
+        height: 551px;
+    }
+
+    .container-footer{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .tittle-social{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 290px){
+    .ul-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .img-ropa img{
+        width: 254px;
+        height: 351px;
+    }
+    .tittle-talla label{
+       margin-left: 50px;
+    }
+    .contendor-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    .text-description p{
+        text-align: start;
+    }
+    .input-cantidad .btn{
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .tittle-social h1{
+        font-size: 1.3rem;
+    }
+    .contact-service h1{
+        font-size: 1.3rem;
+    }
+    .number-contact i{
+        font-size: 1.3rem;
+    }
 }

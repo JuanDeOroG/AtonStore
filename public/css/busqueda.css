@@ -9,10 +9,10 @@
     --font-tittle: 'Anton', sans-serif;
     --font-text: 'Poppins', sans-serif;
     --font-tittle-hero: 'Bebas Neue', cursive;
-    --img-logo: url(/img/logo.png);
+    --img-logo: url(../img/logo.png);
     --clr-hero: #F1F1F1;
     --clr-variedad: #edeee9;
-    --background-fondo: url(/Paginas/img/fondo/fondo.jpg);
+    --background-fondo: url(../img/fondo/fondo.jpg);
 }
 .input-buscar{
     margin-bottom: 100px;

@@ -12,6 +12,8 @@ dotenv.config({path:"./env/.env"})
 
 app.use("/resources",express.static("public"))
 app.use("/resources", express.static(__dirname + "/public"))
+app.use("/img", express.static(__dirname + "/public/img"))
+
 
 // Estableciendo motor de plantillas ejs
 app.set("view engine", "ejs")
